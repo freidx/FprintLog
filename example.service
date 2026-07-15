@@ -1,0 +1,11 @@
+[Unit]
+Description=keeping a log of failed and successful fingerprint events
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/FprintLog
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
